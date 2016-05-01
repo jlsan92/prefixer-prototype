@@ -8,13 +8,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.reconshot.dev.prefixerprototype.MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center">
 
-    <Switch
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/activate_prefixer"
-        android:id="@+id/prefix_toggle"
+        android:id="@+id/btn_prefixer"
         android:layout_gravity="center_horizontal"
-        android:checked="true" />
+        android:text="btn_prefixer" />
 </LinearLayout>

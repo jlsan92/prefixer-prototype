@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.reconshot.dev.prefixerprototype">
 
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name="OutgoingCallInterceptor">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
